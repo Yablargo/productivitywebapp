@@ -260,8 +260,29 @@ namespace ProductivityApp.Models
                 {
                     Id = Guid.NewGuid(),
                     fields = new List<Field> {
-                     new Field(Field.Kinds.String,"Please enter employee first name",null),
-                     new Field(Field.Kinds.String,"Please enter employee last name",null),
+                     new Field(Field.Kinds.String,"Please enter Donee's first name",null),
+                     new Field(Field.Kinds.String,"Please enter Donee's last name",null),
+                    new Field(Field.Kinds.String,"Please enter street address",null),
+                     new Field(Field.Kinds.String,"Enter City, State, and Country",null),
+                     new Field(Field.Kinds.String,"Enter Zip Code",null),
+                    new Field(Field.Kinds.String,"Enter Telphone number",null),
+                     new Field(Field.Kinds.String,"Donee's TIN ",null),
+                      new Field(Field.Kinds.String,"Doner's TIN ",null),
+                       new Field(Field.Kinds.String,"Donor's name",null),
+                        new Field(Field.Kinds.String,"Street address",null),
+                         new Field(Field.Kinds.String,"City/town, State, Zip Code, Country",null),
+                    new Field(Field.Kinds.String,"Date of contribution",null),
+                    new Field(Field.Kinds.String,"Odometer mileage",null),
+                     new Field(Field.Kinds.String,"Year",null),
+                      new Field(Field.Kinds.String,"Make",null),
+                       new Field(Field.Kinds.String,"Model",null),
+                        new Field(Field.Kinds.String,"Vehicle or other Identification number ",null),
+                         new Field(Field.Kinds.String,"Date of Sale",null),
+                          new Field(Field.Kinds.String,"Gross proceeds from sale",null),
+                            new Field(Field.Kinds.String,"Value of goods and services provided in exchange for the vehicle",null),
+
+
+
 
                 }
                 },
@@ -276,14 +297,73 @@ namespace ProductivityApp.Models
                            new Answer("Yes","yes"),
                            new Answer("No","no"),
                        }
-
+                    },
+                    new Criteria() {
+                        Id = Guid.NewGuid(),
+                       prompt = "Donee certifies that vehicle was sold in arm's length transaction to unrelated party",
+                       Category = "Vehicle Transaction",
+                       answers = new List<Answer>
+                       {
+                           new Answer("Yes","yes"),
+                           new Answer("No","no"),
+                       }
+                    },
+            
+                        new Criteria() {
+                      Id = Guid.NewGuid(),
+                       prompt = "Donee certifies that vehicle will not be transferred for money, other property, or services before completion of material improvements or significant intervening use",
+                       Category = "Transfer Information",
+                       answers = new List<Answer>
+                       {
+                           new Answer("Yes","yes"),
+                           new Answer("No","no"),
+                       }
+                
+                  },  new Criteria() {
+                      Id = Guid.NewGuid(),
+                       prompt = "Donee certifies that vehicle is to be transferred to a needy individual for significantly below fair market value in furtherance of donee’s charitable purpose",
+                       Category = "Relocation of Vehicle",
+                       answers = new List<Answer>
+                       {
+                           new Answer("Yes","yes"),
+                           new Answer("No","no"),
+                       }
                   },
-                },
+                   new Criteria() {
+                      Id = Guid.NewGuid(),
+                       prompt = "Donee certifies the following detailed description of material improvements or significant intervening use and duration of use",
+                       Category = "User Agreement"
+                       answers = new List<Answer>
+                       {
+                           new Answer("Yes","yes"),
+                           new Answer("No","no"),
+                       }
+                    },
+                          new Criteria() {
+                      Id = Guid.NewGuid(),
+                       prompt = "Describe the goods and services, if any, that were provided. If this box is checked, donee certifies that the goods and services consisted solely of intangible religious benefits.",
+                       Category = "Charitable Contributions",
+                       answers = new List<Answer>
+                       {
+                           new Answer("Yes","yes"),
+                       }
+                    },
+                     new Criteria() {
+                      Id = Guid.NewGuid(),
+                       prompt = "Under the law, the donor may not claim a deduction of more than $500 for this vehicle if this box is checked",
+                       Category = "Contributions of Motor Vehicles, Boats and Airplanes",
+                       answers = new List<Answer>
+                       {
+                           new Answer("Yes","yes"),
+                        
+                       }
+                    },
+                  }, 
                 destination = new Destination(),
                 forms = new List<Form> {
                     new Form {
                         name = "1098-c",
-                        fileName = "f1098c.pfd",
+                        fileName = "f1098c.pdf",
                         kind = "pdf"
                         
                     }
