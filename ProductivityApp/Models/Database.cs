@@ -210,8 +210,26 @@ namespace ProductivityApp.Models
                         fileName = "NESD_Questionnaire.doc",
                         kind = "doc",
                         assignments = new List<Assignment> {
-                         //put assignments here  
-                        }   
+                            new Assignment("Helpdesk","0",null),
+                            new Assignment("Command","1",null),
+                            new Assignment("Vehicle","2",null),
+                            new Assignment("cor","3",null),
+                            new Assignment("ContNum","4",null),
+                            new Assignment("ExpDate","5",null),
+                            new Assignment("PrimePOC","6",null),
+                            new Assignment("PrimeTitle","7",null),
+                            new Assignment("PrimePhone","8",null),
+                            new Assignment("PrimeEmail","9",null),
+                            new Assignment("AltPOC","10",null),
+                            new Assignment("AltTitle","11",null),
+                            new Assignment("AltPhone","12",null),
+                            new Assignment("AltEmail","13",null),
+                            new Assignment("PrimaryFun","14",null),
+                            new Assignment("Hrs","15",null),
+                            new Assignment("DaysoOp","16",null),
+                            new Assignment("HoliOp","17",null)
+                          
+                        },   
                     }
                  },
                 inputSurvey = new Survey
@@ -239,34 +257,6 @@ namespace ProductivityApp.Models
                                   new Field(Field.Kinds.String,"Hrs","Please enter the hours of opperation",null),
                                    new Field(Field.Kinds.String,"DaysoOp","Please enter the days of opperation",null),
                                     new Field(Field.Kinds.String,"HoliHrs","Please enter the holiday hours",null),
-                }
-                },
-                forms = new List<Form> {
-                    new Form{
-                        assignments = new List<Assignment>
-                        {
-                            new Assignment("Helpdesk","0",null),
-                            new Assignment("Command","1",null),
-                            new Assignment("Vehicle","2",null),
-                            new Assignment("cor","3",null),
-                            new Assignment("ContNum","4",null),
-                            new Assignment("ExpDate","5",null),
-                            new Assignment("PrimePOC","6",null),
-                            new Assignment("PrimeTitle","7",null),
-                            new Assignment("PrimePhone","8",null),
-                            new Assignment("PrimeEmail","9",null),
-                            new Assignment("AltPOC","10",null),
-                            new Assignment("AltTitle","11",null),
-                            new Assignment("AltPhone","12",null),
-                            new Assignment("AltEmail","13",null),
-                            new Assignment("PrimaryFun","14",null),
-                            new Assignment("Hrs","15",null),
-                            new Assignment("DaysoOp","16",null),
-                            new Assignment("HoliOp","17",null)
-                          
-
-                        },
-                       
                     }
                 },
                // assignments = new List<Assignment>(),

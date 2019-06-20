@@ -80,10 +80,14 @@ public class FileHandler : IFileHandler
     {
         object missing = Type.Missing;
         Word.Application app = new Word.Application();
-        Word.Document doc = app.Documents.Open("file.doc", ref missing, true);
-        Word.FormFields fields = doc.FormFields;
-        fields[2].Result = "foo";
-        fields[3].Result = "bar";
+        Word.Document doc = app.Documents.Open(Path.Combine(filePath,form.fileName), ref missing, true);
+      // doc.Unprotect("");
+        app.Visible = true;
+        doc.ActiveWindow.View.ReadingLayout = false;
+        doc.Content.Text += "Testing testing 123";
+        doc.SaveAs2(form.name+"-filled"+form.kind);
+        doc.Close();
+        app.Quit();
         
     }
 
