@@ -57,6 +57,7 @@ public class FileHandler : IFileHandler
             File.Copy(file, dest); 
         }        
     }
+    //MAKE this WORK ON  .DOC
     ///<summary>
     /// This method iterates through the assignments for each form and prints the user inputed value
     /// to the form field
