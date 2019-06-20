@@ -218,10 +218,55 @@ namespace ProductivityApp.Models
                 {
                     Id = Guid.NewGuid(),
                     fields = new List<Field> {
-                     new Field(Field.Kinds.String,"firstname","Please enter your first name",null),
-                     new Field(Field.Kinds.String,"lastname","Please enter your last name",null),
-                     new Field(Field.Kinds.String,"jobtitle","Please enter your job title",null),
- 
+                
+                     new Field(Field.Kinds.String,"Helpdesk","Please enter name of the help desk",null),
+                     new Field(Field.Kinds.String,"Command","Please enter name of command center",null),
+                     new Field(Field.Kinds.String,"Vehicle","Please enter your contract vehicle",null),
+                      new Field(Field.Kinds.String,"cor","Please enter your Contracting Officers Representative",null),
+                       new Field(Field.Kinds.String,"ContNum","Please enter your contract number",null),
+                        new Field(Field.Kinds.String,"Expdate","Please enter contract expiration date",null),
+                         
+                         new Field(Field.Kinds.String,"PrimePOC","Please enter the name of your primary Point of Contact",null),
+                          new Field(Field.Kinds.String,"PrimeTitle","Please enter your POC's title",null),
+                           new Field(Field.Kinds.String,"PrimePhone","Please enter your POC's Phone Number",null),
+                            new Field(Field.Kinds.String,"PrimeEmail","Please enter your POC's Email",null),
+                             new Field(Field.Kinds.String,"AltPOC","Please enter the name of your Alternate Point of Contact",null),
+                              new Field(Field.Kinds.String,"AltTitle","Please enter your Alternate POC's title",null),
+                               new Field(Field.Kinds.String,"AltPhone","Please enter your Alternate POC's Phone Number",null),
+                                new Field(Field.Kinds.String,"ALtEmail","Please enter your Alternate POC's Email",null),
+                                 
+                                 new Field(Field.Kinds.String,"PrimaryFun","Please enter the primary function of the help desk",null),
+                                  new Field(Field.Kinds.String,"Hrs","Please enter the hours of opperation",null),
+                                   new Field(Field.Kinds.String,"DaysoOp","Please enter the days of opperation",null),
+                                    new Field(Field.Kinds.String,"HoliHrs","Please enter the holiday hours",null),
+                }
+                },
+                forms = new List<Form> {
+                    new Form{
+                        assignments = new List<Assignment>
+                        {
+                            new Assignment("Helpdesk","0",null),
+                            new Assignment("Command","1",null),
+                            new Assignment("Vehicle","2",null),
+                            new Assignment("cor","3",null),
+                            new Assignment("ContNum","4",null),
+                            new Assignment("ExpDate","5",null),
+                            new Assignment("PrimePOC","6",null),
+                            new Assignment("PrimeTitle","7",null),
+                            new Assignment("PrimePhone","8",null),
+                            new Assignment("PrimeEmail","9",null),
+                            new Assignment("AltPOC","10",null),
+                            new Assignment("AltTitle","11",null),
+                            new Assignment("AltPhone","12",null),
+                            new Assignment("AltEmail","13",null),
+                            new Assignment("PrimaryFun","14",null),
+                            new Assignment("Hrs","15",null),
+                            new Assignment("DaysoOp","16",null),
+                            new Assignment("HoliOp","17",null)
+                          
+
+                        },
+                       
                     }
                 },
                // assignments = new List<Assignment>(),
