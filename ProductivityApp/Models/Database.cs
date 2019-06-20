@@ -200,10 +200,20 @@ namespace ProductivityApp.Models
             Flow template1 = new Flow
             {
                 IsATemplate = true,
-                name = "Purchase",
+                name = "Help Desk Questionaire",
                 ThumbnailImage = "placeholder.jpg",
                 Id = new Guid("5710c736-f5b9-475f-9ef5-76529ea11111"),
-                Description = "To buy things.",
+                Description = "Demo of the helpdesk questionaire",
+                 forms = new List<Form> {
+                    new Form {
+                        name = "NESD_Questionnaire",
+                        fileName = "NESD_Questionnaire.doc",
+                        kind = "doc",
+                        assignments = new List<Assignment> {
+                         //put assignments here  
+                        }   
+                    }
+                 },
                 inputSurvey = new Survey
                 {
                     Id = Guid.NewGuid(),
@@ -211,32 +221,7 @@ namespace ProductivityApp.Models
                      new Field(Field.Kinds.String,"firstname","Please enter your first name",null),
                      new Field(Field.Kinds.String,"lastname","Please enter your last name",null),
                      new Field(Field.Kinds.String,"jobtitle","Please enter your job title",null),
-
-                }
-                },
-                forms = new List<Form> {
-                    new Form{
-                        assignments = new List<Assignment>
-                        {
-                            new Assignment("firstname","0",null),
-                            new Assignment("lastname","1",null)
-                        },
-                       fileName = "form1.txt",
-                       kind = "text",
-                    name = "Form 1"
-                    },
-                    new Form{
-                        assignments = new List<Assignment>
-                        {
-                            new Assignment("lastname","0",null),
-                            new Assignment("lastname","1",null),
-                            new Assignment("lastname","2",null),
-                            new Assignment("lastname","3",null),
-                            new Assignment("lastname","4",null)
-                        },
-                       fileName = "form2.txt",
-                       kind = "text",
-                    name = "Form 2"
+ 
                     }
                 },
                // assignments = new List<Assignment>(),

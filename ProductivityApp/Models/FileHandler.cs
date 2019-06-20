@@ -1,21 +1,12 @@
 using Microsoft.AspNetCore.Hosting;
 using System;
 using System.IO;
-using System.Diagnostics;
 using System.IO.Compression;
-using System.Collections.Generic;
-using System.Web;
-using iText;
 using iText.Forms;
 using iText.Forms.Fields;
-using iText.Pdfa;
-using iText.IO.Colors;
-using iText.Signatures;
-using iText.Kernel;
 using iText.Kernel.Pdf;
-using iText.Kernel.Pdf.Annot;
-using iText.Kernel.Pdf.Layer;
-
+using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;
 /// <summary>
 /// The file handler deals with all forms of reading/writing files (in this case, copying and filling forms)
 /// </summary>
@@ -70,8 +61,35 @@ public class FileHandler : IFileHandler
         //iterate through each form
         foreach (Form form in flow.forms)
         {
-            PdfDocument pdf = getAPdf(Path.Combine(filePath,form.fileName),
-                Path.Combine(filePath,"modified",(form.name+"-filled."+form.kind))  );
+            switch(form.kind) {
+                case "pdf":
+                    writeToPdf(flow, form, filePath);
+                    break;
+                case "doc":
+                    writeToDoc(flow,form,filePath);
+                    break;
+                default:
+                    break;
+            }
+            
+
+        }
+    }
+
+    public void writeToDoc(Flow flow, Form form, string filePath)
+    {
+        object missing = Type.Missing;
+        Word.Application app = new Word.Application();
+        Word.Document doc = app.Documents.Open("file.doc", ref missing, true);
+        Word.FormFields fields = doc.FormFields;
+        fields[2].Result = "foo";
+        fields[3].Result = "bar";
+        
+    }
+
+    public void writeToPdf(Flow flow, Form form, string filePath) {
+        PdfDocument pdf = getAPdf(Path.Combine(filePath,form.fileName),
+             Path.Combine(filePath,"modified",(form.name+"-filled."+form.kind))  );
             PdfAcroForm acroform = PdfAcroForm.GetAcroForm(pdf, true);
             //then through each assignment
             foreach(Assignment a in form.assignments)
@@ -95,10 +113,7 @@ public class FileHandler : IFileHandler
             }
             pdf.Close();
             
-
-        }
     }
-
     ///<summary>
     /// This method gets the filepath of a specific form in a specific flow
     /// <param name="flow">The flow that contains the form file</param>
