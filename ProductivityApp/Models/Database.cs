@@ -214,9 +214,79 @@ namespace ProductivityApp.Models
                                 inputField =  "Helpdesk",
                                 outputField = "Name of Help Desk",
                             },
+                            new Assignment {
+                                inputField = "Command",
+                                outputField = "Command"
+                            },
+                             new Assignment {
+                                inputField = "Vehicle",
+                                outputField = "Contract Vehicle"
+                            },
+                            new Assignment {
+                                inputField = "cor",
+                                outputField = "Contract Vehicle Contracting Officers Representative COR"
+                            },
+                            new Assignment {
+                                inputField = "ContNum",
+                                outputField = "Contract Number"   
+                            },
+                             new Assignment {
+                                inputField = "Expdate",
+                                outputField = "Period of PerformanceContract Expiration Date"
+                             },
+                             new Assignment {
+                                inputField = "PrimePOC",
+                                outputField = "Primary Point of Contact"
+                             },
+                             new Assignment {
+                                inputField = "PrimeTitle",
+                                outputField = "Title"
+                             },
+                             new Assignment {
+                                inputField = "PrimePhone",
+                                outputField = "Phone"
+                             },
+                             new Assignment {
+                                inputField = "PrimeEmail",
+                                outputField = "Email"
+                             },
+                             new Assignment {
+                                inputField = "AltPOC",
+                                outputField = "Alternate Point of Contact"
+                             },
+                             new Assignment {
+                                inputField = "AltTitle",
+                                outputField = "Title_2"
+                             },
+                             new Assignment {
+                                inputField = "AltPhone",
+                                outputField = "Phone_2"
+                             },
+                             new Assignment {
+                                inputField = "AltEmail",
+                                outputField = "Email_2"
+                             },
+                             new Assignment {
+                                inputField = "PrimaryFun",
+                                outputField = "Primary Function of the Service Desk"
+                             },
+                              new Assignment {
+                                inputField = "Hrs",
+                                outputField = "Hours of Operations"
+                            },
+                             new Assignment {
+                                inputField = "DaysoOp",
+                                outputField = "Days of Operations"
+                             },
+                             new Assignment {
+                                inputField = "HoliHrs",
+                                outputField = "Holiday Hours"
+                             }
+                            
                         }
                     }
-                 },
+                },
+    
                 inputSurvey = new Survey
                 {
                     Id = Guid.NewGuid(),
