@@ -68,11 +68,26 @@ public class FileHandler : IFileHandler
                 case "doc":
                     writeToDoc(flow,form,filePath);
                     break;
+                case "txt":
+                    writeToText(flow, form, filePath);
+                    break;
                 default:
                     break;
             }
             
 
+        }
+    }
+    ///Super crappy method just to print all q and a's to a text file
+    public void writeToText(Flow flow, Form form, string filePath)
+    {
+        using (System.IO.StreamWriter file = 
+            new System.IO.StreamWriter(Path.Combine(filePath,form.fileName), true))
+        {
+            foreach(Field f in flow.inputSurvey.fields) {
+                file.WriteLine(f.prompt+": "+f.answer);
+            }
+            
         }
     }
 
@@ -85,6 +100,7 @@ public class FileHandler : IFileHandler
         app.Visible = true;
         doc.ActiveWindow.View.ReadingLayout = false;
         doc.Content.Text += "Testing testing 123";
+        //this doesnt work yet
         doc.SaveAs2(form.name+"-filled"+form.kind);
         doc.Close();
         app.Quit();
