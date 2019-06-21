@@ -205,36 +205,16 @@ namespace ProductivityApp.Models
                 Id = new Guid("5710c736-f5b9-475f-9ef5-76529ea11111"),
                 Description = "Demo of the helpdesk questionaire",
                  forms = new List<Form> {
-                    /*new Form {
-                        name = "NESD_Questionnaire",
-                        fileName = "NESD_Questionnaire.doc",
-                        kind = "doc",
-                        assignments = new List<Assignment> {
-                            new Assignment("Helpdesk","0",null),
-                            new Assignment("Command","1",null),
-                            new Assignment("Vehicle","2",null),
-                            new Assignment("cor","3",null),
-                            new Assignment("ContNum","4",null),
-                            new Assignment("ExpDate","5",null),
-                            new Assignment("PrimePOC","6",null),
-                            new Assignment("PrimeTitle","7",null),
-                            new Assignment("PrimePhone","8",null),
-                            new Assignment("PrimeEmail","9",null),
-                            new Assignment("AltPOC","10",null),
-                            new Assignment("AltTitle","11",null),
-                            new Assignment("AltPhone","12",null),
-                            new Assignment("AltEmail","13",null),
-                            new Assignment("PrimaryFun","14",null),
-                            new Assignment("Hrs","15",null),
-                            new Assignment("DaysoOp","16",null),
-                            new Assignment("HoliOp","17",null)
-                          
-                        },  
-                        */ 
                         new Form {
-                        name = "filled",
-                        fileName = "filled.txt",
-                        kind = "txt",
+                        name = "NESD_Questionnaire",
+                        fileName = "NESD_Questionnaire.pdf",
+                        kind = "pdf",
+                        assignments = new List<Assignment> {
+                            new Assignment{
+                                inputField =  "Helpdesk",
+                                outputField = "Name of Help Desk",
+                            },
+                        }
                     }
                  },
                 inputSurvey = new Survey
