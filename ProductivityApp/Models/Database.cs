@@ -205,7 +205,7 @@ namespace ProductivityApp.Models
                 Id = new Guid("5710c736-f5b9-475f-9ef5-76529ea11111"),
                 Description = "Demo of the helpdesk questionaire",
                  forms = new List<Form> {
-                    new Form {
+                    /*new Form {
                         name = "NESD_Questionnaire",
                         fileName = "NESD_Questionnaire.doc",
                         kind = "doc",
@@ -229,7 +229,12 @@ namespace ProductivityApp.Models
                             new Assignment("DaysoOp","16",null),
                             new Assignment("HoliOp","17",null)
                           
-                        },   
+                        },  
+                        */ 
+                        new Form {
+                        name = "filled",
+                        fileName = "filled.txt",
+                        kind = "txt",
                     }
                  },
                 inputSurvey = new Survey
