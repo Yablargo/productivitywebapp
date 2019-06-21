@@ -260,46 +260,46 @@ namespace ProductivityApp.Models
                     }
                 },
                // assignments = new List<Assignment>(),
-                criteria = new List<Criteria> {
-                  new Criteria{
-                       Id = Guid.NewGuid(),
-                       prompt = "Credit Card?",
-                       Category = "card",
-                       answers = new List<Answer>
-                       {
-                           new Answer("Yes","yes"),
-                           new Answer("No","no"),
-                           new Answer("Unknown","unknown")
+                //criteria = new List<Criteria> {
+                //   new Criteria{
+                //        Id = Guid.NewGuid(),
+                //        prompt = "Credit Card?",
+                //        Category = "card",
+                //        answers = new List<Answer>
+                //        {
+                //            new Answer("Yes","yes"),
+                //            new Answer("No","no"),
+                //            new Answer("Unknown","unknown")
 
-                       }
+                //        }
 
-                  },
-                  new Criteria{
-                      Id = Guid.NewGuid(),
-                       prompt = "Purchase less than $700,000?",
-                       Category = "less700k",
-                       answers = new List<Answer>
-                       {
-                           new Answer("Yes","yes"),
-                           new Answer("No","no"),
-                           new Answer("Unknown","unknown")
+                //   },
+                //   new Criteria{
+                //       Id = Guid.NewGuid(),
+                //        prompt = "Purchase less than $700,000?",
+                //        Category = "less700k",
+                //        answers = new List<Answer>
+                //        {
+                //            new Answer("Yes","yes"),
+                //            new Answer("No","no"),
+                //            new Answer("Unknown","unknown")
 
-                       }
+                //        }
 
-                  },
-                new Criteria{
-                    Id = Guid.NewGuid(),
-                   prompt = "Purchase between $700,000 and $13.5 Million?",
-                   Category = "gr100",
-                   answers = new List<Answer>
-                   {
-                       new Answer("Yes","yes"),
-                       new Answer("No","no"),
-                       new Answer("Unknown","unknown")
+                //   },
+                // new Criteria{
+                //     Id = Guid.NewGuid(),
+                //    prompt = "Purchase between $700,000 and $13.5 Million?",
+                //    Category = "gr100",
+                //    answers = new List<Answer>
+                //    {
+                //        new Answer("Yes","yes"),
+                //        new Answer("No","no"),
+                //        new Answer("Unknown","unknown")
 
-                    }
-                  }
-              },
+            //         }
+            //       }
+            //   },
                 destination =  new Destination()
             };
             Flow template2 = new Flow
